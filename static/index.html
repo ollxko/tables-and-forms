@@ -8,9 +8,47 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <form action="http://localhost:3000/pets/orders" method="POST">
+        <label for="petType">Тип питомца:</label>
+        <select id="petType" name="petType" required>
+            <option value="" disabled selected hidden>Выберите тип</option>
+            <option value="cat">Кошка</option>
+            <option value="tiger" selected>Тигр</option>
+            <option value="dog">Собака</option>
+        </select><br><br>
+        
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected hidden>Выберите пол</option>
+            <option value="boy" selected>Мальчик</option>
+            <option value="girl">Девочка</option>
+            <option value="none">Нет информации</option>
+        </select><br><br>
+        
+        <label for="eyeColor">Цвет глаз (шестнадцатеричный формат):</label>
+        <input type="text" id="eyeColor" name="eyeColor" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" placeholder="#XXXXXX" value="#0000FF" required><br><br>
+        
+        <label for="tailLength">Длина хвоста:</label>
+        <input type="number" id="tailLength" name="tailLength" placeholder="Введите длину хвоста в см" min="7" max="120" value="20" required><br><br>
+        
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" placeholder="Введите имя хозяина" value="Ольга" required><br><br>
+        
+        <label for="dateOfBirth">Дата рождения:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="ГГГГ-ММ-ДД" value="2022-01-01" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" value="example@example.com" required><br><br>
+        
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" value="+123456789" required><br><br>
+        
+        <label for="rules">Подтверждение согласия:</label>
+        <input type="checkbox" id="rules" name="rules" value="true" checked required> Я согласен с правилами<br><br>
+        
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить значения">
+    </form>    
 </main>
 </body>
 </html>
